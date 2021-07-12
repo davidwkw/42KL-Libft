@@ -6,7 +6,7 @@
 /*   By: kwang <kwang@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 17:58:34 by kwang             #+#    #+#             */
-/*   Updated: 2021/05/25 20:09:07 by kwang            ###   ########.fr       */
+/*   Updated: 2021/06/29 16:25:56 by kwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,25 @@ static size_t	ft_wordcount(char const *s, char c)
 	return (w_c);
 }
 
+static char	*ft_stridup(const char *s, size_t n)
+
+{
+	char			*dup;
+	unsigned int	i;
+
+	dup = malloc(sizeof(char) * n + 1);
+	if (!dup)
+		return (dup);
+	i = 0;
+	while (i < n)
+	{
+		dup[i] = s[i];
+		i++;
+	}
+	dup[i] = '\0';
+	return (dup);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char			**arr;
@@ -41,7 +60,7 @@ char	**ft_split(char const *s, char c)
 	unsigned int	start_index;
 	unsigned int	k;
 
-	arr = malloc(sizeof(char *) * ft_wordcount(s, c) + 1);
+	arr = malloc(sizeof(char *) * (ft_wordcount(s, c) + 1));
 	if (!arr)
 		return (arr);
 	end_index = 0;
@@ -56,7 +75,7 @@ char	**ft_split(char const *s, char c)
 			while (s[end_index] != c && s[end_index])
 				end_index++;
 			if (end_index > start_index)
-				arr[k++] = ft_strndup(s + start_index, end_index - start_index);
+				arr[k++] = ft_stridup(s + start_index, end_index - start_index);
 		}
 	}
 	arr[k] = NULL;

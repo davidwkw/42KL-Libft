@@ -6,7 +6,7 @@
 /*   By: kwang <kwang@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 19:40:35 by kwang             #+#    #+#             */
-/*   Updated: 2021/05/21 12:33:48 by kwang            ###   ########.fr       */
+/*   Updated: 2021/07/10 01:45:33 by kwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	str_len;
+	int		str_len;
+	char	ch;
 
+	ch = (char)c;
 	str_len = ft_strlen(s);
-	if (c == 0)
-		return ((char *)s + str_len);
 	while (str_len >= 0)
 	{
-		if (s[str_len] == (char)c)
+		if (s[str_len] == ch)
 			return ((char *)s + str_len);
 		str_len--;
 	}

@@ -1,43 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kwang <kwang@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/26 09:32:15 by kwang             #+#    #+#             */
-/*   Updated: 2021/07/11 22:40:56 by kwang            ###   ########.fr       */
+/*   Created: 2021/07/09 19:13:33 by kwang             #+#    #+#             */
+/*   Updated: 2021/07/09 20:47:37 by kwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-static int	ft_isws(char c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	return ((c >= 9 && c <= 13) || c == ' ');
-}
-
-int	ft_atoi(const char *str)
-{
-	int				sign;
-	int				res;
 	unsigned int	i;
 
 	i = 0;
-	sign = 1;
-	res = 0;
-	while (ft_isws(str[i]))
-		i++;
-	if (str[i] == '+' || str[i] == '-')
+	if (s && f)
 	{
-		if (str[i] == '-')
-			sign *= -1;
-		i++;
+		while (s[i])
+		{
+			f(i, &s[i]);
+			i++;
+		}
 	}
-	while (ft_isdigit(str[i]))
-	{
-		res = res * 10 + str[i] - '0';
-		i++;
-	}
-	return (res * sign);
 }

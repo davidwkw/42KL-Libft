@@ -6,7 +6,7 @@
 /*   By: kwang <kwang@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 12:28:43 by kwang             #+#    #+#             */
-/*   Updated: 2021/05/24 14:10:01 by kwang            ###   ########.fr       */
+/*   Updated: 2021/07/11 00:59:17 by kwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,23 +34,23 @@ char	*ft_strtrim(char const *s1, char const *set)
 	unsigned int	k;
 
 	i = 0;
-	if (s1 && set && s1[i])
-	{
-		j = ft_strlen(s1);
-		while (is_char_in_set(s1[i], set))
-			i++;
-		if (i == j)
-			return (ft_strdup(""));
-		while (is_char_in_set(s1[j - 1], set))
-			j--;
-		trimmedstr = malloc(sizeof(char) * (j - i) + 1);
-		if (!trimmedstr)
-			return (trimmedstr);
-		k = 0;
-		while (i < j)
-			trimmedstr[k++] = s1[i++];
-		trimmedstr[k] = '\0';
+	if (!s1)
+		return (ft_strdup(""));
+	if (!set)
+		return (ft_strdup((char *) s1));
+	j = ft_strlen(s1);
+	while (is_char_in_set(s1[i], set))
+		i++;
+	if (i == j)
+		return (ft_strdup(""));
+	while (is_char_in_set(s1[j - 1], set))
+		j--;
+	trimmedstr = malloc(sizeof(char) * (j - i) + 1);
+	if (!trimmedstr)
 		return (trimmedstr);
-	}
-	return (ft_strdup(""));
+	k = 0;
+	while (i < j)
+		trimmedstr[k++] = s1[i++];
+	trimmedstr[k] = '\0';
+	return (trimmedstr);
 }

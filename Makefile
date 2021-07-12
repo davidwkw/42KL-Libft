@@ -6,7 +6,7 @@
 #    By: kwang <kwang@student.42kl.edu.my>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/19 16:55:08 by kwang             #+#    #+#              #
-#    Updated: 2021/05/24 20:32:45 by kwang            ###   ########.fr        #
+#    Updated: 2021/07/10 00:27:08 by kwang            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,7 @@ SRCS =	ft_atoi.c \
 		ft_strlcpy.c \
 		ft_strlen.c \
 		ft_strlcat.c \
+		ft_striteri.c \
 		ft_strmapi.c \
 		ft_strncmp.c \
 		ft_strnstr.c \
@@ -66,21 +67,21 @@ NAME = libft.a
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I.
 
 RM = rm -f
 
 %.o: %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
 
-all: bonus
+all: $(NAME)
 
 $(NAME): $(OBJS)
 	@echo "Creating lib file..."
 	@ar rcs $(NAME) $(OBJS)
 
 bonus: $(BNS_OBJS) $(NAME)
-	@echo "Creating lib file with bonus..." 
+	@echo "Adding bonus functions..." 
 	@ar rs $(NAME) $(BNS_OBJS)
 
 clean:
@@ -88,13 +89,10 @@ clean:
 	@$(RM) $(OBJS) $(BNS_OBJS)
 
 fclean: clean
-	@echo "Cleaning up .a file"
+	@echo "Cleaning up $(NAME)"
 	@$(RM) $(NAME)
 
 re: fclean all
 	@echo "Recompiling .a file..."
 
-rebonus: fclean bonus
-	@echo "Recompiling .a file with bonus..."
-
-.PHONY: all re clean fclean bonus rebonus
+.PHONY: all re clean fclean bonus

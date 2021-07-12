@@ -6,7 +6,7 @@
 /*   By: kwang <kwang@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/17 14:39:54 by kwang             #+#    #+#             */
-/*   Updated: 2021/05/19 14:11:47 by kwang            ###   ########.fr       */
+/*   Updated: 2021/05/26 15:33:59 by kwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (new &&lst)
+	if (new && lst)
 	{
 		(*new).next = *lst;
 		*lst = new;

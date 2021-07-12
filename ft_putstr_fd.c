@@ -6,7 +6,7 @@
 /*   By: kwang <kwang@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 01:15:43 by kwang             #+#    #+#             */
-/*   Updated: 2021/05/25 20:15:43 by kwang            ###   ########.fr       */
+/*   Updated: 2021/05/28 14:21:15 by kwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (s && fd)
+	if (s)
 		write(fd, s, ft_strlen(s));
 }
