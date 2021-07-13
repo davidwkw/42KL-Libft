@@ -6,14 +6,14 @@
 #    By: kwang <kwang@student.42kl.edu.my>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/19 16:55:08 by kwang             #+#    #+#              #
-#    Updated: 2021/07/10 00:27:08 by kwang            ###   ########.fr        #
+#    Updated: 2021/07/13 14:20:10 by kwang            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS =	ft_atoi.c \
 		ft_bzero.c \
 		ft_calloc.c \
-	   	ft_strjoin.c \
+		ft_strjoin.c \
 		ft_isascii.c \
 		ft_isalnum.c \
 		ft_isalpha.c \
@@ -71,6 +71,8 @@ CFLAGS = -Wall -Wextra -Werror -I.
 
 RM = rm -f
 
+AR = ar rcs
+
 %.o: %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
 
@@ -78,11 +80,11 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@echo "Creating lib file..."
-	@ar rcs $(NAME) $(OBJS)
+	@$(AR) $(NAME) $(OBJS)
 
 bonus: $(BNS_OBJS) $(NAME)
-	@echo "Adding bonus functions..." 
-	@ar rs $(NAME) $(BNS_OBJS)
+	@echo "Adding bonus functions..."
+	@$(AR) $(NAME) $(BNS_OBJS)
 
 clean:
 	@echo "Cleaning up all .o files..."
