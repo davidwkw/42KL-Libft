@@ -24,7 +24,7 @@ static size_t	ft_nbrlen(int n)
 		posn *= -1;
 		len++;
 	}
-	while (posn >= 10)
+	while (posn > 10)
 	{
 		posn /= 10;
 		len++;

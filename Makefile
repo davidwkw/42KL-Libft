@@ -95,6 +95,6 @@ fclean: clean
 	@$(RM) $(NAME)
 
 re: fclean all
-	@echo "Recompiling .a file..."
+	@echo "Recompiling $(NAME)"
 
 .PHONY: all re clean fclean bonus
