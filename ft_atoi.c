@@ -20,7 +20,7 @@ static int	ft_isws(char c)
 int	ft_atoi(const char *str)
 {
 	int				sign;
-	int				res;
+	long			res;
 	unsigned int	i;
 
 	i = 0;
@@ -36,8 +36,11 @@ int	ft_atoi(const char *str)
 	}
 	while (ft_isdigit(str[i]))
 	{
-		res = res * 10 + str[i] - '0';
-		i++;
+		res = res * 10 + str[i++] - '0';
+		if (res * sign > 2147483647)
+			return (-1);
+		else if (res * sign < -2147483648)
+			return (0);
 	}
 	return (res * sign);
 }
