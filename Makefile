@@ -64,11 +64,13 @@ OBJS = $(SRCS:.c=.o)
 
 BNS_OBJS = $(BNS_SRCS:.c=.o)
 
+INCLUDES = includes
+
 NAME = libft.a
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror -I.
+CFLAGS = -Wall -Wextra -Werror -I$(INCLUDES)
 
 RM = rm -f
 
@@ -77,7 +79,7 @@ AR = ar rcs
 %.o: %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
 
-all: $(NAME)
+all: bonus
 
 $(NAME): $(OBJS)
 	@echo "Creating lib file..."
