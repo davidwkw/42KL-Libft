@@ -41,6 +41,7 @@ static int	store_prevline(t_line *l_obj, char **r_str, char **line)
 	{
 		free(*r_str);
 		*r_str = NULL;
+		*line = NULL;
 		return (-1);
 	}
 	(*l_obj).p_end = ft_strchr(*r_str, '\n');
@@ -55,7 +56,6 @@ static int	store_prevline(t_line *l_obj, char **r_str, char **line)
 		store_endline(l_obj, r_str);
 		return (1);
 	}
-	free(*line);
 	free(*r_str);
 	*r_str = NULL;
 	return (0);
