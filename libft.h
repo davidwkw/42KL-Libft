@@ -35,9 +35,7 @@ typedef struct s_line
 {
 	char	*p_end;
 	int		read_bytes;
-	char	*l_temp;
-	char	*r_str[OPEN_MAX];
-	char	buff[BUFFER_SIZE + 1];
+	char	line_buff[BUFFER_SIZE + 1];
 }				t_line;
 
 void	*ft_memset(void *b, int c, size_t len);
