@@ -57,6 +57,7 @@ BNS_SRCS =	ft_lstnew.c \
 			ft_lstlast.c \
 			ft_lstmap.c \
 			ft_lstsize.c \
+			ft_lst_to_arr.c
 			ft_strndup_bonus.c \
 			ft_strcpy_bonus.c \
 			get_next_line.c \
