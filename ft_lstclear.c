@@ -17,13 +17,14 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*temp;
 	t_list	*next;
 
-	if (*lst && del)
+	if (*lst)
 	{
 		temp = *lst;
 		while (temp)
 		{
 			next = (*temp).next;
-			del((*temp).content);
+			if (del)
+				del((*temp).content);
 			free(temp);
 			temp = next;
 		}
