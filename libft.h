@@ -89,5 +89,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 void	*ft_lst_to_arr(t_list *lst);
 
 int		get_next_line(int fd, char **line);
+int		ft_absolute(int num);
 
 #endif

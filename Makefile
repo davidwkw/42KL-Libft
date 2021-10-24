@@ -61,6 +61,7 @@ BNS_SRCS =	ft_lstnew.c \
 			ft_strndup_bonus.c \
 			ft_strcpy_bonus.c \
 			get_next_line.c \
+			ft_absolute.c \
 
 OBJS = $(SRCS:.c=.o)
 
