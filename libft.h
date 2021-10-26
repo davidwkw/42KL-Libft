@@ -6,7 +6,7 @@
 /*   By: kwang <kwang@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/30 10:26:53 by kwang             #+#    #+#             */
-/*   Updated: 2021/07/09 19:17:22 by kwang            ###   ########.fr       */
+/*   Updated: 2021/10/26 17:13:13 by kwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@
 # include <unistd.h>
 # include <limits.h>
 
-#ifndef OPEN_MAX
-# define OPEN_MAX 4096
-#endif
+# ifndef OPEN_MAX
+#  define OPEN_MAX 4096
+# endif
 
-#ifndef BUFFER_SIZE
-# define BUFFER_SIZE 1024
-#endif
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1024
+# endif
 
 typedef struct s_list
 {
