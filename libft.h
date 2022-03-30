@@ -6,7 +6,7 @@
 /*   By: kwang <kwang@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/30 10:26:53 by kwang             #+#    #+#             */
-/*   Updated: 2021/10/26 17:13:13 by kwang            ###   ########.fr       */
+/*   Updated: 2021/11/17 16:09:15 by kwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 # endif
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1024
+#  define BUFFER_SIZE 4096
 # endif
 
 typedef struct s_list

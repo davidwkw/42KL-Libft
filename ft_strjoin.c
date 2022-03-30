@@ -38,5 +38,5 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		joinedstr[i + j] = '\0';
 		return (joinedstr);
 	}
-	return (ft_strdup(""));
+	return (NULL);
 }

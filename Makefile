@@ -6,7 +6,7 @@
 #    By: kwang <kwang@student.42kl.edu.my>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/19 16:55:08 by kwang             #+#    #+#              #
-#    Updated: 2021/07/13 14:20:10 by kwang            ###   ########.fr        #
+#    Updated: 2022/01/11 13:03:05 by kwang            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,6 +62,7 @@ BNS_SRCS =	ft_lstnew.c \
 			ft_strcpy_bonus.c \
 			get_next_line.c \
 			ft_absolute.c \
+			ft_lstremoveif.c \
 
 OBJS = $(SRCS:.c=.o)
 
