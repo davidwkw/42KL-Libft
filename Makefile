@@ -6,7 +6,7 @@
 #    By: kwang <kwang@student.42kl.edu.my>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/19 16:55:08 by kwang             #+#    #+#              #
-#    Updated: 2022/01/11 13:03:05 by kwang            ###   ########.fr        #
+#    Updated: 2022/04/11 17:50:45 by kwang            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,7 +57,7 @@ BNS_SRCS =	ft_lstnew.c \
 			ft_lstlast.c \
 			ft_lstmap.c \
 			ft_lstsize.c \
-			ft_lst_to_arr.c
+			ft_lst_to_arr.c \
 			ft_strndup_bonus.c \
 			ft_strcpy_bonus.c \
 			get_next_line.c \
