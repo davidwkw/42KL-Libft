@@ -11,11 +11,18 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <limits.h>
+#include <errno.h>
 
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
+	if (count * size >= UINT_MAX)
+	{
+		errno = ENOMEM;
+		return (NULL);
+	}
 	ptr = malloc(count * size);
 	if (!ptr)
 		return (ptr);

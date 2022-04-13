@@ -22,12 +22,12 @@ static size_t	ft_nbrlen(int n)
 	if (n < 0)
 	{
 		posn *= -1;
-		len++;
+		++len;
 	}
 	while (posn >= 10)
 	{
 		posn /= 10;
-		len++;
+		++len;
 	}
 	return (len);
 }
@@ -40,7 +40,7 @@ char	*ft_itoa(int n)
 	size_t	i;
 
 	len = ft_nbrlen(n);
-	str = malloc(sizeof(char) * len + 1);
+	str = malloc(sizeof(char) * (len + 1));
 	posn = n;
 	if (!str)
 		return (str);

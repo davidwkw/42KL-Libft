@@ -6,11 +6,13 @@
 /*   By: kwang <kwang@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 09:32:15 by kwang             #+#    #+#             */
-/*   Updated: 2021/07/11 22:40:56 by kwang            ###   ########.fr       */
+/*   Updated: 2022/04/13 20:46:21 by kwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <limits.h>
+#include <errno.h>
 
 static int	ft_isws(char c)
 {
@@ -37,10 +39,16 @@ int	ft_atoi(const char *str)
 	while (ft_isdigit(str[i]))
 	{
 		res = res * 10 + str[i++] - '0';
-		if (res * sign > 2147483647)
-			return (-1);
-		else if (res * sign < -2147483648)
-			return (0);
+		if (res * sign > INT_MAX)
+		{
+			errno = ERANGE;
+			return (INT_MIN);
+		}
+		else if (res * sign < INT_MIN)
+		{
+			errno = ERANGE;
+			return (INT_MAX);
+		}
 	}
 	return (res * sign);
 }
