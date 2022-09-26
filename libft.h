@@ -6,7 +6,7 @@
 /*   By: kwang <kwang@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/30 10:26:53 by kwang             #+#    #+#             */
-/*   Updated: 2022/09/26 16:08:07 by kwang            ###   ########.fr       */
+/*   Updated: 2022/09/26 16:16:49 by kwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,5 +92,6 @@ void	*ft_lst_to_arr(t_list *lst);
 
 int		get_next_line(int fd, char **line);
 int		ft_absolute(int num);
+int		ft_2darrlen(char **arr);
 
 #endif
