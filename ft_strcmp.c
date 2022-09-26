@@ -6,13 +6,13 @@
 /*   By: kwang <kwang@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 15:55:25 by kwang             #+#    #+#             */
-/*   Updated: 2022/09/26 15:55:39 by kwang            ###   ########.fr       */
+/*   Updated: 2022/09/26 16:08:13 by kwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int    ft_strcmp(const char *s1, const char *s2)
+int ft_strcmp(const char *s1, const char *s2)
 {
     size_t    i;
 
