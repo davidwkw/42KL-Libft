@@ -18,11 +18,8 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
-	if (count * size >= UINT_MAX)
-	{
-		errno = ENOMEM;
+	if (size * count / count != size)
 		return (NULL);
-	}
 	ptr = malloc(count * size);
 	if (!ptr)
 		return (ptr);
