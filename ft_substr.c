@@ -28,12 +28,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 			substr = malloc(sizeof(char) * (len + 1));
 			if (!substr)
 				return (substr);
-			i = -1;
-			while (++i < len)
+			i = 0;
+			while (i < len)
+			{
 				substr[i] = s[start + i];
+				i++;
+			}
 			substr[i] = '\0';
 			return (substr);
 		}
 	}
-	return (NULL);
+	return (ft_strdup(""));
 }
