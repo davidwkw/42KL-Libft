@@ -6,7 +6,7 @@
 /*   By: kwang <kwang@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 15:55:25 by kwang             #+#    #+#             */
-/*   Updated: 2022/09/28 00:18:53 by kwang            ###   ########.fr       */
+/*   Updated: 2022/09/28 00:19:39 by kwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
-	size_t 	i;
+	size_t	i;
 
 	i = 0;
 	while ((s1[i] == s2[i]))
