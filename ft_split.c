@@ -40,7 +40,7 @@ static char	*ft_stridup(const char *s, size_t n)
 	char			*dup;
 	unsigned int	i;
 
-	dup = malloc(sizeof(char) * n + 1);
+	dup = malloc(sizeof(char) * (n + 1));
 	if (!dup)
 		return (dup);
 	i = 0;
