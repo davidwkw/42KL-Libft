@@ -1,6 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstremoveif.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kwang <kwang@student.42kl.edu.my>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/28 00:14:40 by kwang             #+#    #+#             */
+/*   Updated: 2022/09/28 00:14:41 by kwang            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void	ft_lst_remove_if(t_list **begin_list, void *data_ref, int (*cmp)(), void (*free_fct)(void *))
+void	ft_lst_remove_if(t_list **begin_list, void *data_ref, int (*cmp)(),
+						void (*free_fct)(void *))
 {
 	t_list	*curr;
 	t_list	*next;
