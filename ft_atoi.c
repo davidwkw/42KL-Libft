@@ -6,7 +6,7 @@
 /*   By: kwang <kwang@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 09:32:15 by kwang             #+#    #+#             */
-/*   Updated: 2022/04/13 20:46:21 by kwang            ###   ########.fr       */
+/*   Updated: 2022/09/27 19:07:36 by kwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,15 +40,9 @@ int	ft_atoi(const char *str)
 	{
 		res = res * 10 + str[i++] - '0';
 		if (res * sign > INT_MAX)
-		{
-			errno = ERANGE;
-			return (INT_MIN);
-		}
+			return (-1);
 		else if (res * sign < INT_MIN)
-		{
-			errno = ERANGE;
-			return (INT_MAX);
-		}
+			return (0);
 	}
 	return (res * sign);
 }
