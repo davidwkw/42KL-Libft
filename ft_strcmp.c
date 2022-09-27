@@ -6,22 +6,22 @@
 /*   By: kwang <kwang@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 15:55:25 by kwang             #+#    #+#             */
-/*   Updated: 2022/09/28 00:04:59 by kwang            ###   ########.fr       */
+/*   Updated: 2022/09/28 00:18:53 by kwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strcmp(const char *s1, const char *s2)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-    size_t  i;
+	size_t 	i;
 
-    i = 0;
-    while ((s1[i] == s2[i]))
-    {
-        if (s1[i] == '\0' && s2[i] == '\0')
-            return (0);
-        i++;
-    }
-    return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	i = 0;
+	while ((s1[i] == s2[i]))
+	{
+		if (s1[i] == '\0' && s2[i] == '\0')
+			return (0);
+		i++;
+	}
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
