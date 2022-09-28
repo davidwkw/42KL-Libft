@@ -6,7 +6,7 @@
 #    By: kwang <kwang@student.42kl.edu.my>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/19 16:55:08 by kwang             #+#    #+#              #
-#    Updated: 2022/09/27 19:04:31 by kwang            ###   ########.fr        #
+#    Updated: 2022/09/28 15:31:25 by kwang            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,7 +66,9 @@ BNS_SRCS =	ft_lstnew.c \
 			ft_2darrlen.c \
 			ft_free2d.c \
 			ft_strcmp.c \
-			ft_isspace.c
+			ft_isspace.c \
+			ft_max.c \
+			ft_min.c
 
 OBJS = $(SRCS:.c=.o)
 

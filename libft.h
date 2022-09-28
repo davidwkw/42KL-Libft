@@ -6,7 +6,7 @@
 /*   By: kwang <kwang@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/30 10:26:53 by kwang             #+#    #+#             */
-/*   Updated: 2022/09/27 19:04:11 by kwang            ###   ########.fr       */
+/*   Updated: 2022/09/28 15:32:13 by kwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,5 +94,7 @@ int		get_next_line(int fd, char **line);
 int		ft_absolute(int num);
 int		ft_2darrlen(char **arr);
 void	ft_free2d(char **arr);
+int		ft_max(long a, long b);
+int		ft_min(int a, int b);
 
 #endif
