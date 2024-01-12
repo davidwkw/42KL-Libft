@@ -6,7 +6,7 @@
 /*   By: kwang <kwang@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 13:29:28 by kwang             #+#    #+#             */
-/*   Updated: 2022/09/27 23:26:19 by kwang            ###   ########.fr       */
+/*   Updated: 2024/01/12 23:05:50 by kwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char	*ptr;
+	char	*ptr;
 
 	ptr = b;
 	while (len > 0)
