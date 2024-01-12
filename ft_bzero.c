@@ -6,7 +6,7 @@
 /*   By: kwang <kwang@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 13:36:48 by kwang             #+#    #+#             */
-/*   Updated: 2022/04/13 21:26:03 by kwang            ###   ########.fr       */
+/*   Updated: 2024/01/12 21:23:31 by kwang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*ptr;
+	char	*ptr;
 
 	ptr = s;
 	while (n > 0)
