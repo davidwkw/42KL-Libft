@@ -15,7 +15,7 @@
 static size_t	ft_nbrlen(int n)
 {
 	size_t	len;
-	size_t	posn;
+	long	posn;
 
 	len = 1;
 	posn = n;
@@ -36,7 +36,7 @@ char	*ft_itoa(int n)
 {
 	char	*str;
 	size_t	len;
-	size_t	posn;
+	long	posn;
 	size_t	i;
 
 	len = ft_nbrlen(n);
