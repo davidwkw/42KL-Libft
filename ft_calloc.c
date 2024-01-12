@@ -14,15 +14,15 @@
 #include <limits.h>
 #include <errno.h>
 
-void	*ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 
-	if (size * count / count != size)
+	if (size * nmemb / nmemb != size)
 		return (NULL);
-	ptr = malloc(count * size);
+	ptr = malloc(nmemb * size);
 	if (!ptr)
 		return (ptr);
-	ft_memset(ptr, 0, count * size);
+	ft_memset(ptr, 0, nmemb * size);
 	return (ptr);
 }
