@@ -19,23 +19,21 @@ static size_t	ft_wordcount(char const *s, char c)
 
 	i = 0;
 	w_c = 0;
-	if (s && c)
+	if (!s)
+		return (w_c);
+	while (s[i])
 	{
-		while (s[i])
-		{
-			while (s[i] == c)
-				i++;
-			if (s[i])
-				w_c++;
-			while (s[i] && s[i] != c)
-				i++;
-		}
+		while (s[i] == c)
+			i++;
+		if (s[i])
+			w_c++;
+		while (s[i] && s[i] != c)
+			i++;
 	}
 	return (w_c);
 }
 
 static char	*ft_stridup(const char *s, size_t n)
-
 {
 	char			*dup;
 	unsigned int	i;
@@ -61,22 +59,19 @@ char	**ft_split(char const *s, char c)
 	unsigned int	k;
 
 	arr = malloc(sizeof(char *) * (ft_wordcount(s, c) + 1));
-	if (!arr)
+	if (!arr || !s)
 		return (arr);
 	end_index = 0;
 	k = 0;
-	if (s)
+	while (s[end_index])
 	{
-		while (s[end_index])
-		{
-			while (s[end_index] == c)
-				end_index++;
-			start_index = end_index;
-			while (s[end_index] != c && s[end_index])
-				end_index++;
-			if (end_index > start_index)
-				arr[k++] = ft_stridup(s + start_index, end_index - start_index);
-		}
+		while (s[end_index] == c)
+			end_index++;
+		start_index = end_index;
+		while (s[end_index] != c && s[end_index])
+			end_index++;
+		if (end_index > start_index)
+			arr[k++] = ft_stridup(s + start_index, end_index - start_index);
 	}
 	arr[k] = NULL;
 	return (arr);
